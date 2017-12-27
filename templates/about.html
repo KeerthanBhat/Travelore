@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+container {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-family: arial;
+}
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+article {
+    padding: 1em;
+    overflow: hidden;
+    font-family: courier;
+    font-size: 150%;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 100%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+</style>
+
+<div class="container">
+<header>
+  <h1>ABOUT</h1>
+</header>
+
+
+<article class="article">
+  <p>Travelore is a simple web application where the user can search for places to go on a short excursion
+  from Bangalore. Over a 100 places can be found with all the information regarding amenities, road condition, travel duration etc.</p>
+  <p>I am <strong>KEERTHAN BHAT</strong>, developer of this website. Originally I have done this application as the final 
+  project for CS50x, Harvard University online course on Edx.</p>
+  <p> I will be happy to hear your valuable feedback :D. You can find me in the links below.</p>
+</article>
+
+<footer>
+    <a href="https://www.facebook.com/hkeerthan.bhat" class="fa fa-facebook"></a>
+    <a href="https://in.linkedin.com/in/keerthan-bhat-56576712a" class="fa fa-linkedin"></a>
+</footer>
+</div>
+
+{% endblock %}

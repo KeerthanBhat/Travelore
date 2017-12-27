@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<style>
+
+article {
+    padding: 50px;
+    overflow: hidden;
+}
+p {
+    font-family: times;
+    font-size: 150%;
+    font-weight: bold;
+}
+</style>
+
+<div>
+
+<article>
+  <p><img src='https://coverfiles.alphacoders.com/452/45251.jpg'></p>
+  </br>
+  <p>
+  Want to go on a short trip from Bangalore? Worry no more, TRAVELORE is here!
+  </p></br><p>
+  Get information about over a 100 places to excurse with your friends and family.
+  </p>
+</article>
+</div>
+
+<form action = "{{ url_for('search') }}">
+    <input type="submit" value="Search Now"/>
+</form>
+
+
+{% endblock %}

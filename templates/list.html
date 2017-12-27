@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    List
+{% endblock %}
+
+{% block main %}
+    <style>
+        table, th, td {
+    border: 1px solid black;
+    }
+    
+        th, td {
+    padding: 15px;
+    }
+        th, td {
+    text-align: center;
+    }
+    </style>
+    
+    
+    <table  class="table table-striped" style="width:100%">
+      <tr>
+        <th>Id no.</th>
+        <th>Place</th>
+        <th>Rating</th>
+        <th>Type</th>
+        <th>Distance (Km)</th>
+      </tr>
+    {% for data in datas %}
+      <tr>
+        <td align = "center">{{ data.no }}</td>
+        <td align = "center">{{ data.place }}</td>
+        <td align = "center">{{ data.rating }}</td> 
+        <td align = "center">{{ data.type }}</td>
+        <td align = "center">{{ data.distance }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    Search by place name for more information about any place. :-)
+    </br></br>
+{% endblock %}

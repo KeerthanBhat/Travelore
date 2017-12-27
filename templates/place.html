@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Place
+{% endblock %}
+
+{% block main %}
+    <style>
+        table, th, td {
+    border: 1px solid black;
+    }
+    
+        th, td {
+    padding: 15px;
+    }
+        th, td {
+    text-align: center;
+    }
+    </style>
+    {% for data in datas %}
+    <h1>{{ data.place }}</h1>
+    {% endfor %}
+    <table  class="table table-striped" style="width:100%">
+      <tr>
+        <th>Id no.</th>
+        <th>Place</th>
+        <th>Rating</th>
+        <th>Type</th>
+        <th>Distance (Km)</th>
+      </tr>
+    {% for data in datas %}
+      <tr>
+        <td align = "center">{{ data.no }}</td>
+        <td align = "center">{{ data.place }}</td>
+        <td align = "center">{{ data.rating }}</td> 
+        <td align = "center">{{ data.type }}</td>
+        <td align = "center">{{ data.distance }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    {% for info in infos %}
+    <table class="table table-striped" style="width:45%; float:left;">
+     <tr>
+      <th>Direction</th>
+      <td>{{ info.direct }}</td>
+     </tr>
+     <tr>
+      <th>Road review</th>
+      <td>{{ info.road }}</td>
+     </tr>
+     <tr>
+      <th>Food review</th>
+      <td>{{ info.food }}</td>
+     </tr>
+     <tr>
+      <th>Lodge review</th>
+      <td>{{ info.lodge }}</td>
+     </tr>
+     <tr>
+      <th>Food/Lodge ratings</th>
+      <td>{{ info.rate }}</td>
+     </tr>
+     <tr>
+      <th>Petrol availability</th>
+      <td>{{ info.petrol }}</td>
+     </tr>
+    </table>
+    {% endfor %}
+    
+    {% for extra in extras %}
+    <table class="table table-striped" style="width:45%; float:right;">
+     <tr>
+      <th>Nearby places' Id no.</th>
+      <td>{{ extra.ref }}</td>
+     </tr>
+     <tr>
+      <th>Their distances (Km)</th>
+      <td>{{ extra.dist }}</td>
+     </tr>
+     <tr>
+      <th>Remarks</th>
+      <td>{{ extra.remarks }}</td>
+     </tr>
+     <tr>
+      <th>Days required</th>
+      <td>{{ extra.days }}</td>
+     </tr>
+     <tr>
+      <th>Suitable from</th>
+      <td>{{ extra.from }}</td>
+     </tr>
+     <tr>
+      <th>Suitable to</th>
+      <td>{{ extra.to }}</td>
+     </tr>
+    </table>
+    {% endfor %}
+    
+{% endblock %}

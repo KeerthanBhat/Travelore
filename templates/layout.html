@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- documentation at http://getbootstrap.com/, alternative themes at https://www.bootstrapcdn.com/bootswatch/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <title>Travelore: {% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
+    </head>
+    
+    <body>
+
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ url_for('home') }}"><span class="blue" style="font-family:comic sans ms;font-size:50px">T</span><span class="red" style="font-family:comic sans ms;font-size:30px">r</span><span class="blue" style="font-family:comic sans ms;font-size:30px">a</span><span class="red" style="font-family:comic sans ms;font-size:30px">v</span><span class="blue" style="font-family:comic sans ms;font-size:30px">e</span><span class="red" style="font-family:comic sans ms;font-size:30px">l</span><span class="blue" style="font-family:comic sans ms;font-size:30px">o</span><span class="red" style="font-family:comic sans ms;font-size:30px">r</span><span class="blue" style="font-family:comic sans ms;font-size:30px">e</span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{{ url_for('search') }}">Search</a></li>
+                                <li><a href="{{ url_for('about') }}">About</a></li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            {% if get_flashed_messages() %}
+                <header>
+                    <div class="alert alert-info" role="alert">
+                        {{ get_flashed_messages() | join(" ") }}
+                    </div>
+                </header>
+            {% endif %}
+
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+            
+        </div>
+
+    </body>
+</html>
+    

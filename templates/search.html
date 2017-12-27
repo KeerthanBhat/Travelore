@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <form action = "{{ url_for('search') }}" method = "post">
+        <fieldset>
+            <legend style="font-family: comic sans ms">SEARCH BY: </legend>
+            <div class="form-gruop">
+                <input autocomplete="on" autofocus class="form-control" name="place" placeholder="Place name/ Id no." type="text"/> 
+            </div>
+            <br/>
+            <div class="form-gruop">
+                <input autocomplete="on" autofocus class="form-control" name="dist" placeholder="Distance limit (Km)" type="number"/> 
+            </div>
+            <br/>
+            <div class="form-group">
+               <select name = "type">
+               <option disabled selected value> -- select a place type -- </option>
+               <option value = "1">Hill station</option>
+               <option value = "2">Birds sanctuary</option>
+               <option value = "3">Piligrim</option>
+               <option value = "4">River</option>
+               <option value = "5">Waterfall</option>
+               <option value = "6">Archeology</option>
+               <option value = "7">Dam</option>
+               <option value = "8">Landscape</option>
+               <option value = "9">Others</option>
+             </select>
+             </div>
+             <br/>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Search</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
