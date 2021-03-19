@@ -3,7 +3,7 @@ Flask==0.12
 Flask-JSGlue==0.3.1
 Flask-SQLAlchemy==2.2
 Flask-Session==0.3.1
-Jinja2==2.9.5
+Jinja2==2.11.3
 MarkupSafe==1.0
 Pillow==4.2.1
 Pygments==2.2.0
