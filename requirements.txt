@@ -24,7 +24,7 @@ et-xmlfile==1.0.1
 feedparser==5.2.1
 getch==1.0
 help50==2.0.0
-html5lib==0.999
+html5lib==0.99999999
 ipython-genutils==0.2.0
 itsdangerous==0.24
 jdcal==1.3
