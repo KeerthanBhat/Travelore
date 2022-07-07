@@ -44,7 +44,7 @@ ptyprocess==0.5.2
 pycparser==2.18
 pytz==2017.2
 render50==2.0.0
-requests==2.2.1
+requests==2.20.0
 requests-oauthlib==0.8.0
 six==1.5.2
 sqlparse==0.2.3
